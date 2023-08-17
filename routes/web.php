@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\landing\LandingController::class, 'index'])->name('home');
+Route::get('categories', [App\Http\Controllers\landing\CategoryController::class, 'index'])->name('categories');
 
 Route::middleware([
     'auth:sanctum',
