@@ -1,60 +1,98 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+@extends('layouts.landing')
 
-        <x-validation-errors class="mb-4" />
+@section('title')
+    Sipaling Skrispi | Register
+@endsection
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-label for="terms">
-                        <div class="flex items-center">
-                            <x-checkbox name="terms" id="terms" required />
-
-                            <div class="ml-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">'.__('Privacy Policy').'</a>',
-                                ]) !!}
+@section('content')
+    <div class="page-content page-auth" id="register">
+        <div class="section-store-auth" data-aos="fade-up">
+            <div class="container">
+                <div class="row align-items-center justify-content-center row-login">
+                    <div class="col-lg-4">
+                        <h2>
+                            Memulai untuk jual beli <br />
+                            dengan cara terbaru
+                        </h2>
+                        <form class="mt-3">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" class="form-control is-valid" v-model="name" autofocus />
                             </div>
-                        </div>
-                    </x-label>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control is-invalid" v-model="email" />
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Store</label>
+                                <p class="text-muted">
+                                    Apakah anda juga ingin membuka toko?
+                                </p>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="is_store_open"
+                                        id="openStoreTrue" v-model="is_store_open" :value="true" />
+                                    <label class="custom-control-label" for="openStoreTrue">Iya, boleh</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" class="custom-control-input" name="is_store_open"
+                                        id="openStoreFalse" v-model="is_store_open" :value="false" />
+                                    <label class="custom-control-label" for="openStoreFalse">Enggak, makasih</label>
+                                </div>
+                            </div>
+                            <div class="form-group" v-if="is_store_open">
+                                <label>Nama Toko</label>
+                                <input type="text" class="form-control" />
+                            </div>
+                            <div class="form-group" v-if="is_store_open">
+                                <label>Kategori</label>
+                                <select name="category" class="form-control">
+                                    <option value="" disabled>Select Category</option>
+                                    <option value="1">Elektronik</option>
+                                    <option value="2">Fashion</option>
+                                    <option value="3">Furniture</option>
+                                    <option value="4">Hobi</option>
+                                    <option value="5">Kecantikan</option>
+                                    <option value="6">Olahraga</option>
+                                </select>
+                            </div>
+                            <a href="/dashboard.html" class="mt-4 btn btn-success btn-block">Sign Up Now</a>
+                            <a href="{{ route('login') }}" class="mt-2 btn btn-signup btn-block">Back to Sign In</a>
+                        </form>
+                    </div>
                 </div>
-            @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
             </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+        </div>
+    </div>
+@endsection
+
+@push('addon-script')
+    <script src="/vendor/vue/vue.js"></script>
+    <script src="https://unpkg.com/vue-toasted"></script>
+    <script>
+        Vue.use(Toasted);
+
+        var register = new Vue({
+            el: "#register",
+            mounted() {
+                AOS.init();
+                this.$toasted.error("Maaf, tampaknya email sudah terdaftar pada sistem kami.", {
+                    position: "top-center",
+                    className: "rounded",
+                    duration: 1000,
+                });
+            },
+            data() {
+                return {
+                    name: "Farhan Hidayat",
+                    email: "farhanarchman@gmail.com",
+                    is_store_open: true,
+                    store_name: "",
+                };
+            },
+        });
+    </script>
+@endpush

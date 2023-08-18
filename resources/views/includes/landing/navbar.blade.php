@@ -14,14 +14,17 @@
                 <li class="nav-item {{ request()->is('categories') ? 'active' : '' }}">
                     <a href="{{ route('categories') }}" class="nav-link">Categories</a>
                 </li>
-                @guest
+                <li class="nav-item {{ request()->is('upload') ? 'active' : '' }}">
+                    <a href="{{ route('upload') }}" class="nav-link">Upload Skripsi</a>
+                </li>
+                {{-- @guest
                     <li class="nav-item">
                         <a href="{{ route('register') }}" class="nav-link">Sign Up</a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('login') }}" class="px-4 text-white btn btn-success nav-link">Sign In</a>
                     </li>
-                @endguest
+                @endguest --}}
             </ul>
             @auth
                 <!-- Desktop Menu-->

@@ -13,23 +13,31 @@
     @stack('prepend-style')
     @include('includes.dashboard.style')
     @stack('addon-style')
+
 </head>
 
 <body>
-    {{-- Navbar --}}
-    @include('includes.dashboard.navbar')
+    <div class="page-dashboard">
+        <div class="d-flex" id="wrapper" data-aos="fade-right">
+            {{-- Sidebar --}}
+            @include('includes.dashboard.sidebar')
 
-    {{-- Page Content --}}
-    @yield('content')
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                {{-- Navbar --}}
+                @include('includes.dashboard.navbar')
 
-    {{-- Footer --}}
-    @include('includes.dashboard.footer')
+
+                {{-- Page Content --}}
+                @yield('content')
+            </div>
+        </div>
+    </div>
 
     {{-- Script --}}
     @stack('prepend-script')
-    @include('includes.dashboard.script')
+    @include('includes.landing.script')
     @stack('addon-script')
-
 </body>
 
 </html>
