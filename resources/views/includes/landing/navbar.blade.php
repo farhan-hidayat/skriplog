@@ -11,8 +11,8 @@
                 <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                     <a href="{{ route('home') }}" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item {{ request()->is('categories') ? 'active' : '' }}">
-                    <a href="{{ route('categories') }}" class="nav-link">Categories</a>
+                <li class="nav-item {{ request()->is('kategori') ? 'active' : '' }}">
+                    <a href="{{ route('kategori') }}" class="nav-link">Kategori</a>
                 </li>
                 <li class="nav-item {{ request()->is('upload') ? 'active' : '' }}">
                     <a href="{{ route('upload') }}" class="nav-link">Upload Skripsi</a>

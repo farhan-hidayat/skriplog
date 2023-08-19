@@ -10,47 +10,55 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>All Categories</h5>
+                        <h5>All Fakultas</h5>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="100">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-gadgets.svg" alt="" class="w-100" />
-                                <p class="categories-text">Gadgets</p>
+                                <img src="/images/engineer.png" alt="" class="w-100" />
+                                <p class="categories-text">Teknik</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="200">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-furniture.svg" alt="" class="w-100" />
-                                <p class="categories-text">Furniture</p>
+                                <img src="/images/stethoscope.png" alt="" class="w-100" />
+                                <p class="categories-text">Kedokteran</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="300">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-makeup.svg" alt="" class="w-100" />
-                                <p class="categories-text">Make Up</p>
+                                <img src="/images/teacher.png" alt="" class="w-100" />
+                                <p class="categories-text">FKIP</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="400">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-sneaker.svg" alt="" class="w-100" />
-                                <p class="categories-text">Sneaker</p>
+                                <img src="/images/taxes.png" alt="" class="w-100" />
+                                <p class="categories-text">FEB</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="500">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-tools.svg" alt="" class="w-100" />
-                                <p class="categories-text">Tools</p>
+                                <img src="/images/politician.png" alt="" class="w-100" />
+                                <p class="categories-text">FISIP</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#" class="component-categories d-block">
+                            <div class="categories-image">
+                                <img src="/images/calculating.png" alt="" class="w-100" />
+                                <p class="categories-text">FMIPA</p>
                             </div>
                         </a>
                     </div>
@@ -58,7 +66,15 @@
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
                                 <img src="/images/categories-baby.svg" alt="" class="w-100" />
-                                <p class="categories-text">Baby</p>
+                                <p class="categories-text">FAPERTA</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#" class="component-categories d-block">
+                            <div class="categories-image">
+                                <img src="/images/categories-baby.svg" alt="" class="w-100" />
+                                <p class="categories-text">Hukum</p>
                             </div>
                         </a>
                     </div>

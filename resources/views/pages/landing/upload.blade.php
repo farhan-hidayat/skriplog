@@ -6,26 +6,9 @@
 
 @section('content')
     <div class="page-content page-cart">
-        <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav>
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="/index.html">Home</a>
-                                </li>
-                                <li class="breadcrumb-item active">Cart</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="store-cart">
             <div class="container">
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <!-- <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-12 table-responsive">
                         <table class="table table-borderless table-cart">
                             <thead>
@@ -88,68 +71,84 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div> -->
                 <div class="row" data-aos="fade-up" data-aos-delay="150">
                     <div class="col-12">
                         <hr />
                     </div>
                     <div class="col-12">
-                        <h2 class="mb-4">Shipping Details</h2>
+                        <h2 class="mb-4">Data Skripsi</h2>
                     </div>
                 </div>
                 <div class="mb-2 row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <div class="form-group">
-                            <label for="addressOne">Address 1</label>
-                            <input type="text" class="form-control" id="addressOne" name="addressOne"
-                                value="Setra Duta Camera" />
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="addressTwo">Address 2</label>
-                            <input type="text" class="form-control" id="addressTwo" name="addressTwo"
+                            <label for="NamaMahasiswa">Nama Mahasiswa</label>
+                            <input type="text" class="form-control" id="NamaMahasiswa" name="NamaMahasiswa"
                                 value="Setra Duta Camera" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="province">Province</label>
-                            <select name="province" id="province" class="form-control">
-                                <option value="West Java">West Java</option>
-                                <option value="East Java">East Java</option>
-                                <option value="Central Java">Central Java</option>
+                            <label for="NIM">NIM</label>
+                            <input type="text" class="form-control" id="NIM" name="NIM"
+                                value="Setra Duta Camera" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Judul">Judul</label>
+                            <input type="text" class="form-control" id="Judul" name="Judul"
+                                value="Setra Duta Camera" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="Fakultas">Fakultas</label>
+                            <select name="Fakultas" id="Fakultas" class="form-control">
+                                <option value="Teknik">Teknik</option>
+                                <option value="FEB">FEB</option>
+                                <option value="FKIP">FKIP</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="city">City</label>
+                            <label for="city">Jurusan</label>
                             <select name="city" id="city" class="form-control">
-                                <option value="Bandung">Bandung</option>
-                                <option value="Jakarta">Jakarta</option>
-                                <option value="Surabaya">Surabaya</option>
+                                <option value="Teknik Informatika">Teknik Informatika</option>
+                                <option value="Teknik Sipil">Teknik Sipil</option>
+                                <option value="Teknik Arsitek">Teknik Arsitek</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="postalCode">Postal Code</label>
-                            <input type="text" class="form-control" id="postalCode" name="postalCode"
+                            <label for="city">Kategori</label>
+                            <select name="city" id="city" class="form-control">
+                                <option value="Skripsi">Skripsi</option>
+                                <option value="Tesis">Tesis</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="Tahun">Tahun</label>
+                            <input type="text" class="form-control" id="Tahun" name="Tahun"
                                 value="40132" />
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="form-group">
-                            <label for="country">Country</label>
-                            <input type="text" class="form-control" id="country" name="country"
+                            <label for="MetodologiPenelitian">Metodologi Penelitian</label>
+                            <input type="text" class="form-control" id="MetodologiPenelitian" name="MetodologiPenelitian"
                                 value="Indonesia" />
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="form-group">
-                            <label for="mobile">Mobile</label>
-                            <input type="text" class="form-control" id="mobile" name="mobile"
+                            <label for="Subjek">Subjek</label>
+                            <input type="text" class="form-control" id="Subjek" name="Subjek"
                                 value="+628 2020 11111" />
                         </div>
                     </div>
@@ -158,12 +157,12 @@
                     <div class="col-12">
                         <hr />
                     </div>
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                         <h2>Payment Informations</h2>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-4 col-md-2">
+                    <!-- <div class="col-4 col-md-2">
                         <div class="product-title">$30,00</div>
                         <div class="product-subtitle">Country Tax</div>
                     </div>
@@ -178,9 +177,9 @@
                     <div class="col-4 col-md-2">
                         <div class="product-title text-success">$3,110,00</div>
                         <div class="product-subtitle">Total</div>
-                    </div>
+                    </div> -->
                     <div class="col-8 col-md-3">
-                        <a href="/success.html" class="px-4 mt-4 btn btn-success btn-block">Checkout Now</a>
+                        <a href="/success.html" class="px-4 mt-4 btn btn-success btn-block">Unggah</a>
                     </div>
                 </div>
             </div>
