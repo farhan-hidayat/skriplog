@@ -85,21 +85,21 @@
                         <div class="form-group">
                             <label for="NamaMahasiswa">Nama Mahasiswa</label>
                             <input type="text" class="form-control" id="NamaMahasiswa" name="NamaMahasiswa"
-                                value="Setra Duta Camera" />
+                                value="Apri Hernando" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="NIM">NIM</label>
                             <input type="text" class="form-control" id="NIM" name="NIM"
-                                value="Setra Duta Camera" />
+                                value="102030405060" />
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="Judul">Judul</label>
                             <input type="text" class="form-control" id="Judul" name="Judul"
-                                value="Setra Duta Camera" />
+                                value="Rancang Bangun Aplikasi Pendataan Skripsi/Tesis" />
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -107,15 +107,21 @@
                             <label for="Fakultas">Fakultas</label>
                             <select name="Fakultas" id="Fakultas" class="form-control">
                                 <option value="Teknik">Teknik</option>
-                                <option value="FEB">FEB</option>
+                                <option value="Kedokteran">Kedokteran</option>
+                                <option value="Pertanian">Pertanian</option>
+                                <option value="Hukum">Hukum</option>
+                                <option value="Ekonomi">Ekonomi</option>
+                                <option value="MIPA">MIPA</option>
                                 <option value="FKIP">FKIP</option>
+                                <option value="FISIP">FISIP</option>
+                                <option value="Pascasarjana">Pascasarjana</option>
                             </select>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="city">Jurusan</label>
-                            <select name="city" id="city" class="form-control">
+                            <label for="Jurusan">Jurusan</label>
+                            <select name="Jurusan" id="Jurusan" class="form-control">
                                 <option value="Teknik Informatika">Teknik Informatika</option>
                                 <option value="Teknik Sipil">Teknik Sipil</option>
                                 <option value="Teknik Arsitek">Teknik Arsitek</option>
@@ -124,8 +130,8 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label for="city">Kategori</label>
-                            <select name="city" id="city" class="form-control">
+                            <label for="Kategori">Kategori</label>
+                            <select name="Kategori" id="Kategori" class="form-control">
                                 <option value="Skripsi">Skripsi</option>
                                 <option value="Tesis">Tesis</option>
                             </select>
@@ -135,21 +141,21 @@
                         <div class="form-group">
                             <label for="Tahun">Tahun</label>
                             <input type="text" class="form-control" id="Tahun" name="Tahun"
-                                value="40132" />
+                                value="2023" />
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
                             <label for="MetodologiPenelitian">Metodologi Penelitian</label>
                             <input type="text" class="form-control" id="MetodologiPenelitian" name="MetodologiPenelitian"
-                                value="Indonesia" />
+                                value="Kualitatif" />
                         </div>
                     </div>
                     <div class="col-md-5">
                         <div class="form-group">
-                            <label for="Subjek">Subjek</label>
-                            <input type="text" class="form-control" id="Subjek" name="Subjek"
-                                value="+628 2020 11111" />
+                            <label for="Kolasi">Kolasi</label>
+                            <input type="text" class="form-control" id="Kolasi" name="Kolasi"
+                                value="VII/150" />
                         </div>
                     </div>
                 </div>
