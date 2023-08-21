@@ -122,9 +122,10 @@
                         <div class="form-group">
                             <label for="Jurusan">Jurusan</label>
                             <select name="Jurusan" id="Jurusan" class="form-control">
-                                <option value="Teknik Informatika">Teknik Informatika</option>
-                                <option value="Teknik Sipil">Teknik Sipil</option>
-                                <option value="Teknik Arsitek">Teknik Arsitek</option>
+                                <option value="TeknikInformatika">Teknik Informatika</option>
+                                <option value="TeknikSipil">Teknik Sipil</option>
+                                <option value="TeknikArsitek">Teknik Arsitek</option>
+                                <option value="TeknikPertambangan">Teknik Pertambangan</option>
                             </select>
                         </div>
                     </div>

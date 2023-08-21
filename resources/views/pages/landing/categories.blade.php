@@ -65,16 +65,24 @@
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-baby.svg" alt="" class="w-100" />
-                                <p class="categories-text">FAPERTA</p>
+                                <img src="/images/agriculture.png" alt="" class="w-100" />
+                                <p class="categories-text">Pertanian</p>
                             </div>
                         </a>
                     </div>
                     <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
                         <a href="#" class="component-categories d-block">
                             <div class="categories-image">
-                                <img src="/images/categories-baby.svg" alt="" class="w-100" />
+                                <img src="/images/civilright.png" alt="" class="w-100" />
                                 <p class="categories-text">Hukum</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up" data-aos-delay="600">
+                        <a href="#" class="component-categories d-block">
+                            <div class="categories-image">
+                                <img src="/images/graduated.png" alt="" class="w-100" />
+                                <p class="categories-text">Pascasarjana</p>
                             </div>
                         </a>
                     </div>
