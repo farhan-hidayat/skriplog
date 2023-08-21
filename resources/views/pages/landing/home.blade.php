@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>Trend Categories</h5>
+                        <h5>Preview Fakultas</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -96,7 +96,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>New Products</h5>
+                        <h5>New Skripsi</h5>
                     </div>
                 </div>
                 <div class="row">
