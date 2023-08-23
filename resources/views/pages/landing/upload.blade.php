@@ -81,25 +81,31 @@
                     </div>
                 </div>
                 <div class="mb-2 row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="NamaMahasiswa">Nama Mahasiswa</label>
                             <input type="text" class="form-control" id="NamaMahasiswa" name="NamaMahasiswa"
                                 value="Apri Hernando" />
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="form-group">
                             <label for="NIM">NIM</label>
                             <input type="text" class="form-control" id="NIM" name="NIM"
                                 value="102030405060" />
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label for="Judul">Judul</label>
                             <input type="text" class="form-control" id="Judul" name="Judul"
                                 value="Rancang Bangun Aplikasi Pendataan Skripsi/Tesis" />
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="Abstrak">Abstrak</label>
+                            <textarea class="form-control" id="Abstrak" name="Abstrak" rows="5">Abstrak pada skripsi dan tesis adalah ringkasan singkat yang memberikan gambaran menyeluruh tentang isi dan tujuan dari penelitian yang dilakukan. Abstrak biasanya terletak di bagian awal dokumen dan ditulis dalam bentuk paragraf atau beberapa paragraf yang singkat dan padat. Fungsi utamanya adalah untuk memberikan gambaran cepat kepada pembaca tentang topik penelitian, metode yang digunakan, temuan utama, dan implikasi dari penelitian tersebut.</textarea>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -138,21 +144,21 @@
                             </select>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="Tahun">Tahun</label>
                             <input type="text" class="form-control" id="Tahun" name="Tahun"
                                 value="2023" />
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="MetodologiPenelitian">Metodologi Penelitian</label>
                             <input type="text" class="form-control" id="MetodologiPenelitian" name="MetodologiPenelitian"
                                 value="Kualitatif" />
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <div class="form-group">
                             <label for="Kolasi">Kolasi</label>
                             <input type="text" class="form-control" id="Kolasi" name="Kolasi"
