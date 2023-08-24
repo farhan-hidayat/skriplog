@@ -105,7 +105,7 @@
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="Abstrak">Abstrak</label>
-                            <textarea class="form-control" id="Abstrak" name="Abstrak" rows="5">Abstrak pada skripsi dan tesis adalah ringkasan singkat yang memberikan gambaran menyeluruh tentang isi dan tujuan dari penelitian yang dilakukan. Abstrak biasanya terletak di bagian awal dokumen dan ditulis dalam bentuk paragraf atau beberapa paragraf yang singkat dan padat. Fungsi utamanya adalah untuk memberikan gambaran cepat kepada pembaca tentang topik penelitian, metode yang digunakan, temuan utama, dan implikasi dari penelitian tersebut.</textarea>
+                            <textarea class="form-control" id="Abstrak" name="Abstrak">Abstrak pada skripsi dan tesis adalah ringkasan singkat yang memberikan gambaran menyeluruh tentang isi dan tujuan dari penelitian yang dilakukan. Abstrak biasanya terletak di bagian awal dokumen dan ditulis dalam bentuk paragraf atau beberapa paragraf yang singkat dan padat. Fungsi utamanya adalah untuk memberikan gambaran cepat kepada pembaca tentang topik penelitian, metode yang digunakan, temuan utama, dan implikasi dari penelitian tersebut.</textarea>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -165,7 +165,23 @@
                                 value="VII/150" />
                         </div>
                     </div>
-                </div>
+                    </div>
+                        <div class="col-md-12">
+                            <input
+                                type="file"
+                                name=""
+                                id="file"
+                                style="display: none"
+                                multiple
+                                />
+                            <button
+                                class="btn btn-secondary btn-block mt-3"
+                                onclick="thisFileUpload()"
+                                style="background-color: blue; color: white;"
+                                >
+                                Tambahkan File Skripsi/Tesis
+                            </button>
+                        </div>
                 <div class="row" data-aos="fade-up" data-aos-delay="150">
                     <div class="col-12">
                         <hr />
@@ -201,4 +217,13 @@
 @endsection
 
 @push('addon-script')
+<script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('Abstrak');
+</script>
+<script>
+      function thisFileUpload() {
+        document.getElementById("file").click();
+      }
+    </script>
 @endpush
