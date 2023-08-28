@@ -1,7 +1,7 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Sipaling Skrispi | Upload
+    Sipaling Skrispi | Dashboard
 @endsection
 
 @section('content')

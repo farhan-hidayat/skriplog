@@ -36,7 +36,7 @@
 
     {{-- Script --}}
     @stack('prepend-script')
-    @include('includes.landing.script')
+    @include('includes.dashboard.script')
     @stack('addon-script')
 </body>
 

@@ -24,4 +24,5 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('jurusan', [App\Http\Controllers\dashboard\CategoryController::class, 'index'])->name('jurusan');
 });
