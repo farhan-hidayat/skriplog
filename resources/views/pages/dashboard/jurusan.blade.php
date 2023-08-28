@@ -19,7 +19,7 @@
                                 <a href="#" class="mb-3 btn btn-primary">+ Tambah
                                     Jurusan Baru</a>
                                 <div class="table-responsive">
-                                    <table class="table table-hover scroll-horizontal-vertical w-100" id="crudTable">
+                                    <table class="table table-hover scroll-horizontal-vertical w-100" id="example">
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
@@ -30,6 +30,41 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Teknik Informatika</td>
+                                                <td>TI</td>
+                                                <td>teknik-informatika</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Teknik Sipil</td>
+                                                <td>TS</td>
+                                                <td>teknik-sipil</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Teknik Arsitektur</td>
+                                                <td>TA</td>
+                                                <td>teknik-arsitektur</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Teknik Pertambangan</td>
+                                                <td>TP</td>
+                                                <td>teknik-pertambangan</td>
+                                                <td>Aksi</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Kedokteran</td>
+                                                <td>KD</td>
+                                                <td>kedokteran</td>
+                                                <td>Aksi</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -43,4 +78,7 @@
 @endsection
 
 @push('addon-script')
+    <script>
+        new DataTable('#example');
+    </script>
 @endpush
