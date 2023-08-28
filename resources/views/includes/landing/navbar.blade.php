@@ -35,7 +35,7 @@
                             Hi, {{ Auth::user()->name }}
                         </a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Dashboard</a>
+                            <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
                             <a href="#" class="dropdown-item">Settings</a>
                             <div class="dropdown-divider"></div>
                             <a href="{{ route('logout') }}"

@@ -7,13 +7,13 @@
             Dashboard
         </a>
         <a href="/dashboard-products.html" class="list-group-item list-group-item-action">
-            My Products
+            Data Kategori
         </a>
         <a href="/dashboard-transactions.html" class="list-group-item list-group-item-action">
-            Transactions
+            Data Skripsi
         </a>
         <a href="/dashboard-settings.html" class="list-group-item list-group-item-action">
-            Store Settings
+            Data Tesis
         </a>
         <a href="/dashboard-account.html" class="list-group-item list-group-item-action">
             My Account
