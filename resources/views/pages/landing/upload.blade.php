@@ -35,8 +35,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-12">
-                                        <input type="file" name="" id="file" style="display: none"
-                                            multiple />
+                                        <input type="file" name="" id="file" style="display: none" />
                                         <button class="mt-3 btn btn-secondary btn-block" onclick="thisFileUpload()"
                                             style="background-color: blue; color: white;">
                                             Tambahkan Cover Skripsi/Tesis

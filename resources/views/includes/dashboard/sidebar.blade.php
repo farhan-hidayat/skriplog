@@ -7,14 +7,20 @@
             class="list-group-item list-group-item-action {{ request()->is('dashboard') ? 'active' : '' }}">
             Dashboard
         </a>
-        <a href="{{ route('jurusan') }}"
-            class="list-group-item list-group-item-action {{ request()->is('jurusan') ? 'active' : '' }}">
+        <a href="{{ route('faculties.index') }}"
+            class="list-group-item list-group-item-action {{ request()->is('faculties') ? 'active' : '' }}">
+            Data Fakultas
+        </a>
+        <a href="{{ route('majors.index') }}"
+            class="list-group-item list-group-item-action {{ request()->is('majors') ? 'active' : '' }}">
             Data Jurusan
         </a>
-        <a href="/dashboard-transactions.html" class="list-group-item list-group-item-action">
+        <a href="{{ route('skripsi') }}"
+            class="list-group-item list-group-item-action {{ request()->is('skripsi') ? 'active' : '' }}">
             Data Skripsi
         </a>
-        <a href="/dashboard-settings.html" class="list-group-item list-group-item-action">
+        <a href="{{ route('tesis') }}"
+            class="list-group-item list-group-item-action {{ request()->is('tesis') ? 'active' : '' }}">
             Data Tesis
         </a>
         <a href="/dashboard-account.html" class="list-group-item list-group-item-action">

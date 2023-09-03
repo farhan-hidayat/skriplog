@@ -16,8 +16,8 @@
                     <div class="col-md-4">
                         <div class="mb-2 card">
                             <div class="card-body">
-                                <div class="dashboard-card-title">Kategori</div>
-                                <div class="dashboard-card-subtitle">15</div>
+                                <div class="dashboard-card-title">Fakultas/Jurusan</div>
+                                <div class="dashboard-card-subtitle">{{ $faculty }}/{{ $major }}</div>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                 <div class="mt-3 row">
                     <div class="mt-2 col-12">
                         <h5 class="mb-3">Unggahan Terbaru</h5>
-                        <a href="/dashboard-transactions-details.html" class="card card-list d-block">
+                        <a href="{{ route('details') }}" class="card card-list d-block">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-1">
@@ -56,7 +56,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="/dashboard-transactions-details.html" class="card card-list d-block">
+                        <a href="{{ route('details') }}" class="card card-list d-block">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-1">
@@ -71,7 +71,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="/dashboard-transactions-details.html" class="card card-list d-block">
+                        <a href="{{ route('details') }}" class="card card-list d-block">
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-1">
