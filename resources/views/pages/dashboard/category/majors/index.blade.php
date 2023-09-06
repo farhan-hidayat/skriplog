@@ -16,13 +16,13 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
-                                <a href="{{ route('majors.create') }}" class="btn btn-primary mb-3">+ Tambah
+                                <a href="{{ route('majors.create') }}" class="mb-3 btn btn-primary">+ Tambah
                                     Jurusan Baru</a>
                                 <div class="table-responsive">
                                     <table class="table table-hover scroll-horizontal-vertical w-100" id="crudMajors">
                                         <thead>
                                             <tr>
-                                                <th>ID</th>
+                                                <th>No.</th>
                                                 <th>Nama</th>
                                                 <th>Slug</th>
                                                 <th>Fakultas</th>
@@ -52,8 +52,11 @@
                 url: '{!! url()->current() !!}',
             },
             columns: [{
-                    data: 'id',
-                    name: 'id'
+                    data: 'no',
+                    name: 'no',
+                    orderable: false,
+                    searchable: false,
+                    width: '5%'
                 },
                 {
                     data: 'name',
@@ -76,8 +79,14 @@
                 },
             ]
         })
+
+        datatable.on('order.dt search.dt', function() {
+            datatable.column(0, {
+                search: 'applied',
+                order: 'applied'
+            }).nodes().each(function(cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        }).draw();
     </script>
-    {{-- <script>
-        new DataTable('#example1');
-    </script> --}}
 @endpush

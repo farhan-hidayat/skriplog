@@ -8,11 +8,11 @@
             Dashboard
         </a>
         <a href="{{ route('faculties.index') }}"
-            class="list-group-item list-group-item-action {{ request()->is('faculties') ? 'active' : '' }}">
+            class="list-group-item list-group-item-action {{ request()->is('faculties*') ? 'active' : '' }}">
             Data Fakultas
         </a>
         <a href="{{ route('majors.index') }}"
-            class="list-group-item list-group-item-action {{ request()->is('majors') ? 'active' : '' }}">
+            class="list-group-item list-group-item-action {{ request()->is('majors*') ? 'active' : '' }}">
             Data Jurusan
         </a>
         <a href="{{ route('skripsi') }}"

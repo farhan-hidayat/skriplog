@@ -4,7 +4,7 @@ Skriplog merupakan aplikasi E-Catalog Skripsi sederhana yang dibangun menggunaka
 
 ## Installation
 
--   Siapkan [Composer](https://getcomposer.org/download/) bagi yang belum punya. kemudian jalankan
+-   Siapkan [Composer](https://getcomposer.org/download/) & [NodeJs LTS](https://nodejs.org/id) bagi yang belum punya. kemudian jalankan
 
 ```bash
 composer install

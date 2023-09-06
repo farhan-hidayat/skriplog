@@ -22,13 +22,14 @@ class MajorController extends Controller
         if (request()->ajax()) {
 
             $query = Major::with('faculty');
+            $i = 1;
 
             return DataTables()->of($query)
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" type="button" data-toggle="dropdown">
+                                <button class="mb-1 mr-1 btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                     Aksi
                                 </button>
                                 <div class="dropdown-menu">
@@ -45,7 +46,10 @@ class MajorController extends Controller
                             </div>
                         </div>';
                 })
-                ->rawColumns(['action'])
+                ->addColumn('no', function ($item) use (&$i) {
+                    return $i++;
+                })
+                ->rawColumns(['action', 'no'])
                 ->make();
         }
         return view('pages.dashboard.category.majors.index');

@@ -22,13 +22,14 @@ class FacultyController extends Controller
         if (request()->ajax()) {
 
             $query = Faculty::query();
+            $i = 1;
 
             return DataTables()->of($query)
                 ->addColumn('action', function ($item) {
                     return '
                         <div class="btn-group">
                             <div class="dropdown">
-                                <button class="btn btn-primary dropdown-toggle mr-1 mb-1" type="button" data-toggle="dropdown">
+                                <button class="mb-1 mr-1 btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
                                     Aksi
                                 </button>
                                 <div class="dropdown-menu">
@@ -48,7 +49,10 @@ class FacultyController extends Controller
                 ->editColumn('icons', function ($item) {
                     return $item->icons ? '<img src="' . Storage::url($item->icons) . '" style="max-height: 40px;" />' : '';
                 })
-                ->rawColumns(['action', 'icons'])
+                ->addColumn('no', function ($item) use (&$i) {
+                    return $i++;
+                })
+                ->rawColumns(['action', 'icons', 'no'])
                 ->make();
         }
         return view('pages.dashboard.category.faculties.index');
