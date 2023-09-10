@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Faculty;
+use App\Models\Major;
+use App\Models\Thesis;
 use Illuminate\Http\Request;
 
-class SkripsiController extends Controller
+class ThesisController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -55,9 +58,14 @@ class SkripsiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit($id)
     {
-        return view('pages.dashboard.details');
+        $data = [
+            'thesis' => Thesis::with('faculty', 'major')->find($id),
+            'faculties' => Faculty::all(),
+            'majors' => Major::all()
+        ];
+        return view('pages.dashboard.details', $data);
     }
 
     /**

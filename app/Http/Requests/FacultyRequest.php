@@ -26,7 +26,7 @@ class FacultyRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'icons.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048'
+            'icons.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:512'
         ];
     }
 }

@@ -25,7 +25,7 @@
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Skripsi</div>
-                                <div class="dashboard-card-subtitle">31</div>
+                                <div class="dashboard-card-subtitle">{{ $skripsi }}</div>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Tesis</div>
-                                <div class="dashboard-card-subtitle">22</div>
+                                <div class="dashboard-card-subtitle">{{ $tesis }}</div>
                             </div>
                         </div>
                     </div>
@@ -41,51 +41,23 @@
                 <div class="mt-3 row">
                     <div class="mt-2 col-12">
                         <h5 class="mb-3">Unggahan Terbaru</h5>
-                        <a href="{{ route('details') }}" class="card card-list d-block">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <img src="/images/dashboard-icon-product-1.png" class="w-50" />
-                                    </div>
-                                    <div class="col-md-4">Rancang Bangun XXXXX</div>
-                                    <div class="col-md-3">Farhan</div>
-                                    <div class="col-md-3">22 Agustus, 2020</div>
-                                    <div class="col-md-1 d-none d-md-block">
-                                        <img src="/images/dashboard-arrow-right.svg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="{{ route('details') }}" class="card card-list d-block">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <img src="/images/dashboard-icon-product-1.png" class="w-50" />
-                                    </div>
-                                    <div class="col-md-4">Rancang Bangun XXXXX</div>
-                                    <div class="col-md-3">Apri</div>
-                                    <div class="col-md-3">22 Agustus, 2020</div>
-                                    <div class="col-md-1 d-none d-md-block">
-                                        <img src="/images/dashboard-arrow-right.svg" />
+                        @foreach ($theses as $thesis)
+                            <a href="{{ route('details', $thesis->id) }}" class="card card-list d-block">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-1">
+                                            <img src="{{ Storage::url($thesis->photo) }}" class="w-50" />
+                                        </div>
+                                        <div class="col-md-4">{{ $thesis->title }}</div>
+                                        <div class="col-md-3">{{ $thesis->name }}</div>
+                                        <div class="col-md-3">{{ $thesis->created_at }}</div>
+                                        <div class="col-md-1 d-none d-md-block">
+                                            <img src="/images/dashboard-arrow-right.svg" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
-                        <a href="{{ route('details') }}" class="card card-list d-block">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <img src="/images/dashboard-icon-product-1.png" class="w-50" />
-                                    </div>
-                                    <div class="col-md-4">Rancang Bangun XXXXX</div>
-                                    <div class="col-md-3">Erick</div>
-                                    <div class="col-md-3">22 Agustus, 2020</div>
-                                    <div class="col-md-1 d-none d-md-block">
-                                        <img src="/images/dashboard-arrow-right.svg" />
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
             </div>

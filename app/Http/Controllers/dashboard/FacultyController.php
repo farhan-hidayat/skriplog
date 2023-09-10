@@ -77,6 +77,7 @@ class FacultyController extends Controller
     public function store(FacultyRequest $request)
     {
         $data = $request->all();
+        return $data;
         $data['slug'] = Str::slug($data['name']);
 
         $data['icons'] = $request->file('icons')->store(

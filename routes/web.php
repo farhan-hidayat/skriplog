@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\landing\LandingController::class, 'index'])->name('home');
 Route::get('/kategori', [App\Http\Controllers\landing\CategoryController::class, 'index'])->name('kategori');
 Route::get('/upload', [App\Http\Controllers\landing\UploadController::class, 'index'])->name('upload');
+Route::post('api/fetch-majors', [App\Http\Controllers\landing\UploadController::class, 'fetchMajors'])->name('fetch-majors');
+Route::post('/upload', [App\Http\Controllers\landing\UploadController::class, 'store'])->name('upload-store');
 
 
 Route::middleware([
@@ -28,8 +30,8 @@ Route::middleware([
     Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('faculties', FacultyController::class);
     Route::resource('majors', MajorController::class);
-    Route::get('/skripsi', [App\Http\Controllers\dashboard\SkripsiController::class, 'skripsi'])->name('skripsi');
+    Route::get('/skripsi', [App\Http\Controllers\dashboard\ThesisController::class, 'skripsi'])->name('skripsi');
     // Route::get('/faculties/create', [App\Http\Controllers\dashboard\FilesController::class, 'create'])->name('tambah_fak');
-    Route::get('/tesis', [App\Http\Controllers\dashboard\SkripsiController::class, 'tesis'])->name('tesis');
-    Route::get('/details', [App\Http\Controllers\dashboard\SkripsiController::class, 'edit'])->name('details');
+    Route::get('/tesis', [App\Http\Controllers\dashboard\ThesisController::class, 'tesis'])->name('tesis');
+    Route::get('/details/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'edit'])->name('details');
 });
