@@ -106,9 +106,9 @@ class FacultyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Faculty $faculty)
     {
-        //
+        return view('pages.dashboard.category.faculties.edit', compact('faculty'));
     }
 
     /**
@@ -118,9 +118,26 @@ class FacultyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(FacultyRequest $request, Faculty $faculty)
     {
-        //
+        $data = $request->all();
+
+        if ($request->hasFile('icons')) {
+            $path = $request->file('icons')->store(
+                'assets/faculty',
+                'public'
+            );
+        }
+
+        $data = [
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'icons' => isset($path) ? $path : $faculty->icons
+        ];
+
+        $faculty->update($data);
+
+        return redirect()->route('faculties.index');
     }
 
     /**
@@ -129,8 +146,10 @@ class FacultyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Faculty $faculty)
     {
-        //
+        $faculty->delete();
+
+        return redirect()->route('faculties.index');
     }
 }

@@ -102,9 +102,14 @@ class MajorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Major $major)
     {
-        //
+        $data = [
+            'major' => $major->load('faculty'),
+            'faculties' => Faculty::all()
+        ];
+
+        return view('pages.dashboard.category.majors.edit', $data);
     }
 
     /**
@@ -114,9 +119,14 @@ class MajorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(MajorRequest $request, Major $major)
     {
-        //
+        $data = $request->all();
+        $data['slug'] = Str::slug($data['name']);
+
+        $major->update($data);
+
+        return redirect()->route('majors.index');
     }
 
     /**
@@ -125,8 +135,10 @@ class MajorController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Major $major)
     {
-        //
+        $major->delete();
+
+        return redirect()->route('majors.index');
     }
 }
