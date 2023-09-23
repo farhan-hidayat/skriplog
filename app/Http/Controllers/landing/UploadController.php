@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Landing;
 
+use Alert;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FacultyRequest;
 use App\Http\Requests\ThesisRequest;
@@ -36,7 +37,7 @@ class UploadController extends Controller
 
         $thesis->create($data);
 
-        return redirect()->route('upload');
+        return redirect()->route('upload')->with('toast_success', 'Data Berhasil Ditambahkan');
     }
 
     // public function store(FacultyRequest $request)

@@ -25,7 +25,7 @@ class ThesisRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
-            'nim' => 'required|string',
+            'nim' => 'required|string|unique:theses',
             'faculty_id' => 'required|exists:faculties,id',
             'major_id' => 'required|exists:majors,id',
             'title' => 'required|string',
@@ -40,6 +40,27 @@ class ThesisRequest extends FormRequest
             'file.*' => 'required|docs|mimes:pdf|max:5120',
             'status' => 'nullable|string',
             'position' => 'nullable|string'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'photo.*.required' => 'Photo is required',
+            'photo.*.image' => 'Photo must be an image',
+            'photo.*.mimes' => 'Photo must be a jpeg, png, or jpg',
+            'photo.*.max' => 'Photo must be less than 1MB',
+            'file.*.required' => 'File is required',
+            'file.*.docs' => 'File must be a document',
+            'file.*.mimes' => 'File must be a pdf',
+            'file.*.max' => 'File must be less than 5MB',
+            'name.required' => 'Name is required',
+            'nim.required' => 'Nim is required',
+            'nim.unique' => 'Nim must be unique',
+            'title.required' => 'Title is required',
+            'abstract.required' => 'Abstract is required',
+            'date.required' => 'Date is required',
+            'metodology.required' => 'Metodology is required',
         ];
     }
 }

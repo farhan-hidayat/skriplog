@@ -10,12 +10,12 @@
             <div class="container">
                 <div class="row align-items-center row-login">
                     <div class="text-center col-lg-6">
-                        <img src="/images/login-placeholder.png" alt="Login Image" class="mb-4 w-50 mb-lg-none">
+                        <img src="/images/logoupr.png" alt="Login Image" class="mb-4 w-50 mb-lg-none">
                     </div>
                     <div class="col-lg-5">
                         <h2>
-                            Belanja kebutuhan utama, <br />
-                            menjadi lebih mudah
+                            Selamat Datang Admin, <br />
+                            Selamat Bekerja.
                         </h2>
                         <form method="POST" action="{{ route('login') }}" class="mt-3">
                             @csrf

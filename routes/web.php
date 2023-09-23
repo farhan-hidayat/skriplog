@@ -31,7 +31,9 @@ Route::middleware([
     Route::resource('faculties', FacultyController::class);
     Route::resource('majors', MajorController::class);
     Route::get('/skripsi', [App\Http\Controllers\dashboard\ThesisController::class, 'skripsi'])->name('skripsi');
+    Route::delete('/skripsi/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'destroySkripsi'])->name('destroy_skripsi');
     // Route::get('/faculties/create', [App\Http\Controllers\dashboard\FilesController::class, 'create'])->name('tambah_fak');
     Route::get('/tesis', [App\Http\Controllers\dashboard\ThesisController::class, 'tesis'])->name('tesis');
+    Route::delete('/tesis/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'destroyTesis'])->name('destroy_tesis');
     Route::get('/details/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'edit'])->name('details');
 });

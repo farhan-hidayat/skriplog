@@ -17,6 +17,7 @@
 
 <body>
     {{-- Navbar --}}
+    @include('sweetalert::alert')
     @include('includes.landing.navbar')
 
     {{-- Page Content --}}
