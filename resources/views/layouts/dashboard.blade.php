@@ -20,6 +20,7 @@
     <div class="page-dashboard">
         <div class="d-flex" id="wrapper" data-aos="fade-right">
             {{-- Sidebar --}}
+            @include('sweetalert::alert')
             @include('includes.dashboard.sidebar')
 
             <!-- Page Content -->

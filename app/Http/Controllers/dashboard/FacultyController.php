@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use Alert;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FacultyRequest;
@@ -36,12 +37,7 @@ class FacultyController extends Controller
                                     <a class="dropdown-item" href="' . route('faculties.edit', $item->id) . '">
                                         Sunting
                                     </a>
-                                    <form action="' . route('faculties.destroy', $item->id) . '" method="POST">
-                                        ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="dropdown-item text-danger">
-                                            Hapus
-                                        </button>
-                                    </form>
+                                    <a href="' . route('faculties.destroy', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
                                 </div>
                             </div>
                         </div>';
@@ -55,6 +51,11 @@ class FacultyController extends Controller
                 ->rawColumns(['action', 'icons', 'no'])
                 ->make();
         }
+
+        $title = 'Hapus Data!';
+        $text = "Apakah Anda Yakin Ingin Menghapus Data?";
+        confirmDelete($title, $text);
+
         return view('pages.dashboard.category.faculties.index');
     }
 
@@ -87,7 +88,7 @@ class FacultyController extends Controller
 
         Faculty::create($data);
 
-        return redirect()->route('faculties.index');
+        return redirect()->route('faculties.index')->with('toast_success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -138,7 +139,7 @@ class FacultyController extends Controller
 
         $faculty->update($data);
 
-        return redirect()->route('faculties.index');
+        return redirect()->route('faculties.index')->with('toast_success', 'Data Berhasil Diubah');
     }
 
     /**
@@ -151,6 +152,6 @@ class FacultyController extends Controller
     {
         $faculty->delete();
 
-        return redirect()->route('faculties.index');
+        return redirect()->route('faculties.index')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

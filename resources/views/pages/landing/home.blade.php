@@ -43,17 +43,21 @@
                     @php
                         $incrementProduct = 0;
                     @endphp
-                    @foreach ($faculties as $faculty)
+                    @forelse ($faculties as $faculty)
                         <div class="col-6 col-md-3 col-lg-2" data-aos="fade-up"
                             data-aos-delay="{{ $incrementProduct += 100 }}">
-                            <a href="#" class="component-categories d-block">
+                            <a href="{{ route('kategori-show', $faculty->slug) }}" class="component-categories d-block">
                                 <div class="categories-image">
                                     <img src="{{ Storage::url($faculty->icons) }}" alt="" class="w-100" />
                                     <p class="categories-text">{{ $faculty->name }}</p>
                                 </div>
                             </a>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="py-5 text-center col-12" data-aos="fade-up" data-aos-delay="100">
+                            No Categories Found
+                        </div>
+                    @endforelse
                 </div>
             </div>
         </section>
@@ -69,10 +73,10 @@
                     @php
                         $incrementProduct = 0;
                     @endphp
-                    @foreach ($theses as $thesis)
+                    @forelse ($theses as $thesis)
                         <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up"
                             data-aos-delay="{{ $incrementProduct += 100 }}">
-                            <a href="/details.html" class="component-products d-block">
+                            <a href="{{ route('detail-show', $thesis->no) }}" class="component-products d-block">
                                 <div class="products-thumbnail">
                                     <div class="products-image"
                                         style="
@@ -84,7 +88,11 @@
                                 <div class="products-price">{{ $thesis->name }}</div>
                             </a>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="py-5 text-center col-12" data-aos="fade-up" data-aos-delay="100">
+                            No Skripsi/Tesis Found
+                        </div>
+                    @endforelse
                 </div>
             </div>
         </section>

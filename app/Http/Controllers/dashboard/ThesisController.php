@@ -35,12 +35,7 @@ class ThesisController extends Controller
                                     <a class="dropdown-item" href="' . route('details', $item->id) . '">
                                         Sunting
                                     </a>
-                                    <form action="' . route('destroy_skripsi', $item->id) . '" method="POST">
-                                        ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="dropdown-item text-danger" data-confirm-delete="true">
-                                            Hapus
-                                        </button>
-                                    </form>
+                                    <a href="' . route('destroy_skripsi', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
                                 </div>
                             </div>
                         </div>';
@@ -84,12 +79,7 @@ class ThesisController extends Controller
                                     <a class="dropdown-item" href="' . route('details', $item->id) . '">
                                         Sunting
                                     </a>
-                                    <form action="' . route('destroy_tesis', $item->id) . '" method="POST">
-                                        ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="dropdown-item text-danger" data-confirm-delete="true">
-                                            Hapus
-                                        </button>
-                                    </form>
+                                    <a href="' . route('destroy_tesis', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
                                 </div>
                             </div>
                         </div>';

@@ -25,8 +25,18 @@ class MajorRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:majors',
             'faculty_id' => 'required|exists:faculties,id'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Nama Jurusan harus diisi',
+            'name.unique' => 'Nama Jurusan sudah ada',
+            'faculty_id.required' => 'Fakultas harus dipilih',
+            'faculty_id.exists' => 'Fakultas tidak ada',
         ];
     }
 }

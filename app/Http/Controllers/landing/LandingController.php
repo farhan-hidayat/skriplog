@@ -13,8 +13,17 @@ class LandingController extends Controller
     {
         $data = [
             'faculties' => Faculty::take(6)->get(),
-            'theses' => Thesis::all()
+            'theses' => Thesis::with('faculty')->where('status', 'Publish')->take(6)->get()
         ];
         return view('pages.landing.home', $data);
+    }
+
+    public function show(Request $request, $no)
+    {
+        $data =
+            [
+                'thesis' => Thesis::with('faculty', 'major')->where('no', $no)->firstOrFail(),
+            ];
+        return view('pages.landing.thesis', $data);
     }
 }

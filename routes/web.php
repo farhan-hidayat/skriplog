@@ -16,7 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\landing\LandingController::class, 'index'])->name('home');
+Route::get('/detail/{id}', [App\Http\Controllers\landing\LandingController::class, 'show'])->name('detail-show');
 Route::get('/kategori', [App\Http\Controllers\landing\CategoryController::class, 'index'])->name('kategori');
+Route::get('/kategori/{id}', [App\Http\Controllers\landing\CategoryController::class, 'show'])->name('kategori-show');
 Route::get('/upload', [App\Http\Controllers\landing\UploadController::class, 'index'])->name('upload');
 Route::post('api/fetch-majors', [App\Http\Controllers\landing\UploadController::class, 'fetchMajors'])->name('fetch-majors');
 Route::post('/upload', [App\Http\Controllers\landing\UploadController::class, 'store'])->name('upload-store');

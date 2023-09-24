@@ -13,7 +13,18 @@ class CategoryController extends Controller
     {
         $data = [
             'faculties' => Faculty::all(),
-            'theses' => Thesis::all()
+            'theses' => Thesis::with('faculty')->where('status', 'Publish')->paginate(32)
+        ];
+        return view('pages.landing.categories', $data);
+    }
+
+    public function show($slug)
+    {
+        $faculty = Faculty::where('slug', $slug)->firstOrFail();
+        $data = [
+            'faculties' => Faculty::all(),
+            'faculty' => $faculty,
+            'theses' => Thesis::where('faculty_id', $faculty->id)->with('faculty')->where('status', 'Publish')->paginate(32)
         ];
         return view('pages.landing.categories', $data);
     }

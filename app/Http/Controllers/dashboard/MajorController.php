@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use Alert;
 use Illuminate\Support\Str;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MajorRequest;
@@ -36,12 +37,7 @@ class MajorController extends Controller
                                     <a class="dropdown-item" href="' . route('majors.edit', $item->id) . '">
                                         Sunting
                                     </a>
-                                    <form action="' . route('majors.destroy', $item->id) . '" method="POST">
-                                        ' . method_field('delete') . csrf_field() . '
-                                        <button type="submit" class="dropdown-item text-danger">
-                                            Hapus
-                                        </button>
-                                    </form>
+                                    <a href="' . route('majors.destroy', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
                                 </div>
                             </div>
                         </div>';
@@ -52,6 +48,11 @@ class MajorController extends Controller
                 ->rawColumns(['action', 'no'])
                 ->make();
         }
+
+        $title = 'Hapus Data!';
+        $text = "Apakah Anda Yakin Ingin Menghapus Data?";
+        confirmDelete($title, $text);
+
         return view('pages.dashboard.category.majors.index');
     }
 
@@ -82,7 +83,7 @@ class MajorController extends Controller
 
         Major::create($data);
 
-        return redirect()->route('majors.index');
+        return redirect()->route('majors.index')->with('toast_success', 'Data Berhasil Ditambahkan');
     }
 
     /**
@@ -126,7 +127,7 @@ class MajorController extends Controller
 
         $major->update($data);
 
-        return redirect()->route('majors.index');
+        return redirect()->route('majors.index')->with('toast_success', 'Data Berhasil Diubah');
     }
 
     /**
@@ -139,6 +140,6 @@ class MajorController extends Controller
     {
         $major->delete();
 
-        return redirect()->route('majors.index');
+        return redirect()->route('majors.index')->with('toast_success', 'Data Berhasil Dihapus');
     }
 }

@@ -25,8 +25,17 @@ class FacultyRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|max:255',
+            'name' => 'required|string|max:255|unique:faculties',
             'icons.*' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:512'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.required' => 'Nama fakultas harus diisi',
+            'name.unique' => 'Nama fakultas sudah terdaftar',
+            'name.max' => 'Nama fakultas maksimal 255 karakter',
         ];
     }
 }
