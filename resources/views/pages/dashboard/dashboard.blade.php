@@ -41,7 +41,7 @@
                 <div class="mt-3 row">
                     <div class="mt-2 col-12">
                         <h5 class="mb-3">Unggahan Terbaru</h5>
-                        @foreach ($theses as $thesis)
+                        @foreach ($theses->sortByDesc('created_at') as $thesis)
                             <a href="{{ route('details', $thesis->id) }}" class="card card-list d-block">
                                 <div class="card-body">
                                     <div class="row">
