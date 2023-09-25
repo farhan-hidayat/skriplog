@@ -11,12 +11,13 @@
                 <div class="row">
                     <div class="col-12">
                         <nav>
-                            <ol class="breadcrumb">
+                            {{-- <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
                                     <a href="/index.html">Home</a>
                                 </li>
                                 <li class="breadcrumb-item active">Product Details</li>
-                            </ol>
+                            </ol> --}}
+                            <h1>{{ $thesis->title }}</h1>
                         </nav>
                     </div>
                 </div>
@@ -26,100 +27,64 @@
         <section class="store-gallery" id="gallery">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8" data-aos="zoom-in">
+                    <div class="col-lg-5" data-aos="zoom-in">
+                        {{-- <transition name="slide-fade" mode="out-in">
+                            <img :src="{{ Storage::url($thesis->photo) }}" class="w-100 main-image" alt="" />
+                        </transition> --}}
                         <transition name="slide-fade" mode="out-in">
                             <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" class="w-100 main-image"
                                 alt="" />
                         </transition>
                     </div>
-                    <div class="col-lg-2">
-                        <div class="row">
-                            <div class="mt-2 col-3 col-lg-12 mt-lg-0" v-for="(photo, index) in photos"
-                                :key="photo.id" data-aos="zoom-in" data-aos-delay="100">
-                                <a href="#" @click="changeActive(index)">
-                                    <img :src="photo.url" class="w-100 thumbnail-image"
-                                        :class="{ active: index == activePhoto }" alt="" />
-                                </a>
-                            </div>
+                    <div class="col-lg-5">
+                        <div class="store-details-container" data-aos="fade-up">
+                            <section class="store-heading">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <h1>{{ $thesis->name }}</h1>
+                                            <div class="owner">{{ $thesis->nim }}</div>
+                                            <div class="price">{{ $thesis->faculty->name }}/{{ $thesis->major->name }}
+                                            </div>
+                                        </div>
+                                    </div>
+                            </section>
+                            <section class="store-description">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-12">
+                                            {!! $thesis->abstract !!}
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="store-details-container" data-aos="fade-up">
+        {{-- <div class="store-details-container" data-aos="fade-up">
             <section class="store-heading">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-8">
-                            <h1>Sofa Ternyaman</h1>
-                            <div class="owner">By Farhan</div>
-                            <div class="price">$1,410</div>
-                        </div>
-                        <div class="col-lg-2" data-aos="zoom-in">
-                            <a href="/cart.html" class="px-4 mb-3 text-white btn btn-success btn-block">Add to Cart
-                            </a>
+                        <div class="col-lg-12">
+                            <h1>{{ $thesis->title }}</h1>
+                            <div class="owner">{{ $thesis->name }}</div>
+                            <div class="price">{{ $thesis->faculty->name }}</div>
                         </div>
                     </div>
             </section>
             <section class="store-description">
                 <div class="container">
                     <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <p>
-                                The Nike Air Max 720 SE goes bigger than ever before with
-                                Nike's tallest Air unit yet for unimaginable, all-day comfort.
-                                There's super breathable fabrics on the upper, while colours
-                                add a modern edge.
-                            </p>
-                            <p>
-                                Bring the past into the future with the Nike Air Max 2090, a
-                                bold look inspired by the DNA of the iconic Air Max 90.
-                                Brand-new Nike Air cushioning underfoot adds unparalleled
-                                comfort while transparent mesh and vibrantly coloured details
-                                on the upper are blended with timeless OG features for an
-                                edgy, modernised look.
-                            </p>
+                        <div class="col-12 col-lg-12">
+                            {!! $thesis->abstract !!}
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="store-review">
-                <div class="container">
-                    <div class="row">
-                        <div class="mt-3 mb-3 col-12 col-lg-8">
-                            <h5>Customer Review (3)</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-lg-8">
-                            <ul class="list-unstyled">
-                                <li class="media">
-                                    <img src="/images/icon-testimonial-1.png" alt="Icon User" class="mr-3 rounded-circle">
-                                    <div class="media-body">
-                                        <h5 class="mt-2 mb-1">Rizal</h5>
-                                        Sofa nya bagus banget, mantap!
-                                    </div>
-                                </li>
-                                <li class="media">
-                                    <img src="/images/icon-testimonial-2.png" alt="Icon User" class="mr-3 rounded-circle">
-                                    <div class="media-body">
-                                        <h5 class="mt-2 mb-1">Jerry</h5>
-                                        Mantap!
-                                </li>
-                                <li class="media">
-                                    <img src="/images/icon-testimonial-3.png" alt="Icon User" class="mr-3 rounded-circle">
-                                    <div class="media-body">
-                                        <h5 class="mt-2 mb-1">Bayu</h5>
-                                        Good Item
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
+        </div> --}}
     </div>
 @endsection
 
@@ -134,22 +99,9 @@
             data: {
                 activePhoto: 0,
                 photos: [{
-                        id: 1,
-                        url: "/images/product-details-1.jpg",
-                    },
-                    {
-                        id: 2,
-                        url: "/images/product-details-2.jpg",
-                    },
-                    {
-                        id: 3,
-                        url: "/images/product-details-3.jpg",
-                    },
-                    {
-                        id: 4,
-                        url: "/images/product-details-4.jpg",
-                    },
-                ],
+                    id: 1,
+                    url: "{{ Storage::url($thesis->photo) }}",
+                }, ],
             },
             methods: {
                 changeActive(id) {
