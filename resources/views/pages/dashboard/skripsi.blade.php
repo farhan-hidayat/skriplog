@@ -25,6 +25,7 @@
                                                 <th>Judul</th>
                                                 <th>Jurusan</th>
                                                 <th>Tahun</th>
+                                                <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>
                                         </thead>
@@ -72,6 +73,27 @@
                 {
                     data: 'date',
                     name: 'date'
+                },
+                {
+                    data: 'status',
+                    name: 'status',
+                    render: function(data, type, row) {
+                        var statusClass = '';
+                        var statusText = '';
+
+                        if (data === 'Tidak Sesuai') {
+                            statusClass = 'badge-danger';
+                            statusText = 'Tidak Sesuai';
+                        } else if (data === 'Diproses') {
+                            statusClass = 'badge-warning';
+                            statusText = 'Diproses';
+                        } else if (data === 'Publish') {
+                            statusClass = 'badge-success';
+                            statusText = 'Publish';
+                        }
+
+                        return '<span class="badge ' + statusClass + '">' + statusText + '</span>';
+                    }
                 },
                 {
                     data: 'action',

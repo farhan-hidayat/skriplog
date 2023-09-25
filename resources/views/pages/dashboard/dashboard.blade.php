@@ -25,7 +25,7 @@
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Skripsi</div>
-                                <div class="dashboard-card-subtitle">{{ $skripsi }}</div>
+                                <div class="dashboard-card-subtitle">{{ $skripsiP }}/{{ $skripsiAll }}</div>
                             </div>
                         </div>
                     </div>
@@ -33,7 +33,7 @@
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Tesis</div>
-                                <div class="dashboard-card-subtitle">{{ $tesis }}</div>
+                                <div class="dashboard-card-subtitle">{{ $tesisP }}/{{ $tesisAll }}</div>
                             </div>
                         </div>
                     </div>

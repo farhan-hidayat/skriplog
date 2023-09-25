@@ -38,4 +38,5 @@ Route::middleware([
     Route::get('/tesis', [App\Http\Controllers\dashboard\ThesisController::class, 'tesis'])->name('tesis');
     Route::delete('/tesis/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'destroyTesis'])->name('destroy_tesis');
     Route::get('/details/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'edit'])->name('details');
+    Route::put('/details/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'update'])->name('verify');
 });

@@ -15,8 +15,10 @@ class DashboardController extends Controller
         $data = [
             'faculty' => Faculty::count(),
             'major' => Major::count(),
-            'tesis' => Thesis::where('category', 'Tesis')->count(),
-            'skripsi' => Thesis::where('category', 'Skripsi')->count(),
+            'tesisP' => Thesis::where('category', 'Tesis')->where('status', 'Publish')->count(),
+            'tesisAll' => Thesis::where('category', 'Tesis')->count(),
+            'skripsiP' => Thesis::where('category', 'Skripsi')->where('status', 'Publish')->count(),
+            'skripsiAll' => Thesis::where('category', 'Skripsi')->count(),
             'theses' => Thesis::all()
         ];
         return view('pages.dashboard.dashboard', $data);

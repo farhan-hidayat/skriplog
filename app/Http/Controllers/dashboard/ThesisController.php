@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use Alert;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ThesisRequest;
 use App\Models\Faculty;
 use App\Models\Major;
 use App\Models\Thesis;
@@ -33,7 +34,7 @@ class ThesisController extends Controller
                                 </button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="' . route('details', $item->id) . '">
-                                        Sunting
+                                        Verifikasi
                                     </a>
                                     <a href="' . route('destroy_skripsi', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
                                 </div>
@@ -77,7 +78,7 @@ class ThesisController extends Controller
                                 </button>
                                 <div class="dropdown-menu">
                                     <a class="dropdown-item" href="' . route('details', $item->id) . '">
-                                        Sunting
+                                        Verifikasi
                                     </a>
                                     <a href="' . route('destroy_tesis', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
                                 </div>
@@ -145,7 +146,12 @@ class ThesisController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+
+        $thesis = Thesis::find($id);
+        $thesis->update($data);
+
+        return redirect()->route('dashboard')->with('toast_success', 'Data Berhasil Diubah');
     }
 
     /**
