@@ -12,7 +12,7 @@
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown">
                         <img src="/images/icon-user.png" alt="Icon User" class="mr-2 rounded-circle profile-picture" />
-                        Hi, Farhan
+                        Hi, {{ Auth::user()->name }}
                     </a>
                     <div class="dropdown-menu">
                         <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
