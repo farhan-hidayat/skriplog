@@ -11,12 +11,6 @@
                 <div class="row">
                     <div class="col-12">
                         <nav>
-                            {{-- <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="/index.html">Home</a>
-                                </li>
-                                <li class="breadcrumb-item active">Product Details</li>
-                            </ol> --}}
                             <h1>{{ $thesis->title }}</h1>
                         </nav>
                     </div>
@@ -28,9 +22,6 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5" data-aos="zoom-in">
-                        {{-- <transition name="slide-fade" mode="out-in">
-                            <img :src="{{ Storage::url($thesis->photo) }}" class="w-100 main-image" alt="" />
-                        </transition> --}}
                         <transition name="slide-fade" mode="out-in">
                             <img :src="photos[activePhoto].url" :key="photos[activePhoto].id" class="w-100 main-image"
                                 alt="" />
@@ -46,6 +37,8 @@
                                             <div class="owner">{{ $thesis->nim }}</div>
                                             <div class="price">{{ $thesis->faculty->name }}/{{ $thesis->major->name }}
                                             </div>
+                                            <div class="owner">{{ $thesis->date }}</div>
+                                            <div class="owner">{{ $thesis->position }}</div>
                                         </div>
                                     </div>
                             </section>
@@ -63,28 +56,6 @@
                 </div>
             </div>
         </section>
-
-        {{-- <div class="store-details-container" data-aos="fade-up">
-            <section class="store-heading">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1>{{ $thesis->title }}</h1>
-                            <div class="owner">{{ $thesis->name }}</div>
-                            <div class="price">{{ $thesis->faculty->name }}</div>
-                        </div>
-                    </div>
-            </section>
-            <section class="store-description">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12 col-lg-12">
-                            {!! $thesis->abstract !!}
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div> --}}
     </div>
 @endsection
 

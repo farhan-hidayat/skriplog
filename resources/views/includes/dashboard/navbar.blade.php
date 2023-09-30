@@ -16,7 +16,7 @@
                     </a>
                     <div class="dropdown-menu">
                         <a href="{{ route('dashboard') }}" class="dropdown-item">Dashboard</a>
-                        <a href="/dashboard-account.html" class="dropdown-item">Settings</a>
+                        <a href="{{ route('account') }}" class="dropdown-item">Settings</a>
                         <div class="dropdown-divider"></div>
                         <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();

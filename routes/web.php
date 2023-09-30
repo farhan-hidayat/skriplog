@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\landing\LandingController::class, 'index'])->name('home');
 Route::get('/detail/{id}', [App\Http\Controllers\landing\LandingController::class, 'show'])->name('detail-show');
 Route::get('/kategori', [App\Http\Controllers\landing\CategoryController::class, 'index'])->name('kategori');
+Route::post('search', [App\Http\Controllers\landing\CategoryController::class, 'search'])->name('search');
 Route::get('/kategori/{id}', [App\Http\Controllers\landing\CategoryController::class, 'show'])->name('kategori-show');
 Route::get('/upload', [App\Http\Controllers\landing\UploadController::class, 'index'])->name('upload');
 Route::post('api/fetch-majors', [App\Http\Controllers\landing\UploadController::class, 'fetchMajors'])->name('fetch-majors');
@@ -30,6 +31,8 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/account', [App\Http\Controllers\dashboard\DashboardController::class, 'account'])->name('account');
+    Route::put('/account', [App\Http\Controllers\dashboard\DashboardController::class, 'account'])->name('account');
     Route::resource('faculties', FacultyController::class);
     Route::resource('majors', MajorController::class);
     Route::get('/skripsi', [App\Http\Controllers\dashboard\ThesisController::class, 'skripsi'])->name('skripsi');

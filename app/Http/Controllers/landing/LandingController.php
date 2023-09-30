@@ -13,7 +13,7 @@ class LandingController extends Controller
     {
         $data = [
             'faculties' => Faculty::take(6)->get(),
-            'theses' => Thesis::with('faculty')->where('status', 'Publish')->take(6)->get()
+            'theses' => Thesis::with('faculty')->where('status', 'Publish')->orderBy('created_at', 'desc')->take(8)->get()
         ];
         return view('pages.landing.home', $data);
     }

@@ -36,6 +36,11 @@
                                                         value="{{ $thesis->nim }}" />
                                                 </div>
                                                 <div class="col-12 col-md-12">
+                                                    <div class="product-title">email</div>
+                                                    <input type="text" class="form-control" id="email" name="email"
+                                                        value="{{ $thesis->email }}" />
+                                                </div>
+                                                <div class="col-12 col-md-12">
                                                     <div class="product-title">Judul</div>
                                                     <input type="text" class="form-control" id="title" name="title"
                                                         value="{{ $thesis->title }}" />
@@ -51,9 +56,9 @@
                                                         name="isrnissn" value="{{ $thesis->isrnissn }}" />
                                                 </div>
                                                 <div class="col-12 col-md-3">
-                                                    <div class="product-title">Tanggal Masuk Buku</div>
-                                                    <input type="text" class="form-control"
-                                                        value="{{ $thesis->created_at }}" disabled />
+                                                    <div class="product-title">Posisi Buku</div>
+                                                    <input type="text" class="form-control" id="Posisi"
+                                                        name="position" value="{{ $thesis->position }}" />
                                                 </div>
                                                 <div class="col-12 col-md-4">
                                                     <div class="product-title">Fakultas</div>
@@ -86,12 +91,12 @@
                                                             Tesis</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-12 col-md-4">
+                                                <div class="col-12 col-md-2">
                                                     <div class="product-title">Tahun</div>
                                                     <input type="text" class="form-control" id="Tahun" name="date"
                                                         value="{{ $thesis->date }}" />
                                                 </div>
-                                                <div class="col-12 col-md-4">
+                                                <div class="col-12 col-md-3">
                                                     <div class="product-title">Metodologi Penelitian</div>
                                                     <input type="text" class="form-control" id="MetodologiPenelitian"
                                                         name="metodology" value="{{ $thesis->metodology }}" />
@@ -100,6 +105,11 @@
                                                     <div class="product-title">Kolasi</div>
                                                     <input type="text" class="form-control" id="Kolasi"
                                                         name="collation" value="{{ $thesis->collation }}" />
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <div class="product-title">Tanggal Masuk Buku</div>
+                                                    <input type="text" class="form-control"
+                                                        value="{{ $thesis->created_at }}" disabled />
                                                 </div>
                                                 <div class="col-12 col-md-12">
                                                     <a href="{{ Storage::url($thesis->file) }}"class="mt-3 btn btn-secondary btn-block"

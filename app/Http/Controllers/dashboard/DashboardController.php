@@ -7,6 +7,7 @@ use App\Models\Faculty;
 use App\Models\Major;
 use App\Models\Thesis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -22,5 +23,21 @@ class DashboardController extends Controller
             'theses' => Thesis::all()
         ];
         return view('pages.dashboard.dashboard', $data);
+    }
+
+    public function account()
+    {
+        $data = [
+            'user' => Auth::user(),
+        ];
+        return view('pages.dashboard.account', $data);
+    }
+
+    public function update(Request $request)
+    {
+        $user = Auth::user();
+        $user->update($request->all());
+
+        return redirect()->route('dashboard.account');
     }
 }

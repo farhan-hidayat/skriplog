@@ -25,6 +25,7 @@ class ThesisRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:theses',
             'nim' => 'required|string|unique:theses',
             'faculty_id' => 'required|exists:faculties,id',
             'major_id' => 'required|exists:majors,id',
@@ -55,6 +56,13 @@ class ThesisRequest extends FormRequest
             'file.*.mimes' => 'File must be a pdf',
             'file.*.max' => 'File must be less than 5MB',
             'name.required' => 'Name is required',
+            'name.string' => 'Name must be a string',
+            'name.max' => 'Name must be less than 255 characters',
+            'email.required' => 'Email is required',
+            'email.string' => 'Email must be a string',
+            'email.email' => 'Email must be a valid email',
+            'email.max' => 'Email must be less than 255 characters',
+            'email.unique' => 'Email must be unique',
             'nim.required' => 'Nim is required',
             'nim.unique' => 'Nim must be unique',
             'title.required' => 'Title is required',

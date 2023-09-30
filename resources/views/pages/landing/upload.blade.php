@@ -87,6 +87,13 @@
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
+                                                    <label for="email">email</label>
+                                                    <input type="text" class="form-control" id="email" name="email"
+                                                        placeholder="email@email.com" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
                                                     <label for="title">Judul</label>
                                                     <input type="text" class="form-control" id="title" name="title"
                                                         placeholder="Rancang Bangun Aplikasi Pendataan Skripsi/Tesis" />
@@ -129,8 +136,8 @@
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="date">Tahun</label>
-                                                    <input type="text" class="form-control" id="date" name="date"
-                                                        placeholder="2023" />
+                                                    <input type="text" class="form-control" id="date"
+                                                        name="date" placeholder="2023" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">

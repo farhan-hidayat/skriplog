@@ -23,8 +23,8 @@
             class="list-group-item list-group-item-action {{ request()->is('tesis') ? 'active' : '' }}">
             Data Tesis
         </a>
-        <a href="/dashboard-account.html" class="list-group-item list-group-item-action">
+        {{-- <a href="/dashboard-account.html" class="list-group-item list-group-item-action">
             My Account
-        </a>
+        </a> --}}
     </div>
 </div>

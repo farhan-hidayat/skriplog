@@ -4,6 +4,10 @@
     Sipaling Skrispi | Categories
 @endsection
 
+@push('prepend-style')
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+@endpush
+
 @section('content')
     <div class="page-content page-home">
         <section class="store-trand-categories">
@@ -38,12 +42,29 @@
 
         <section class="store-new-products">
             <div class="container">
-                <div class="row">
-                    <div class="col-12" data-aos="fade-up">
-                        <h5>All Skripsi</h5>
+                <form action="{{ route('search') }}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-4" data-aos="fade-up">
+                            <h5>All Skripsi</h5>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up">
+                            <select name="major" class="select2 form-control">
+                                <option value="">all</option>
+                                @foreach ($majors as $major)
+                                    <option value="{{ $major->id }}">{{ $major->name }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-md-4" data-aos="fade-up">
+                            <input type="text" name="search" id="search" class="form-control"
+                                placeholder="Search Judul">
+                        </div>
+                        <button type="submit" id="submit-button" style="display: none;"></button>
                     </div>
-                </div>
-                <div class="row">
+                </form>
+                <div class="row mt-4">
                     @php
                         $incrementProduct = 0;
                     @endphp
@@ -74,4 +95,12 @@
 @endsection
 
 @push('addon-script')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+@endpush
+@push('addon-script')
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
+    </script>
 @endpush
