@@ -32,7 +32,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\dashboard\DashboardController::class, 'index'])->name('dashboard');
     Route::get('/account', [App\Http\Controllers\dashboard\DashboardController::class, 'account'])->name('account');
-    Route::put('/account', [App\Http\Controllers\dashboard\DashboardController::class, 'account'])->name('account');
+    Route::put('/update', [App\Http\Controllers\dashboard\DashboardController::class, 'update'])->name('update-account');
     Route::resource('faculties', FacultyController::class);
     Route::resource('majors', MajorController::class);
     Route::get('/skripsi', [App\Http\Controllers\dashboard\ThesisController::class, 'skripsi'])->name('skripsi');

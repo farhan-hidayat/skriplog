@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UserRequest;
 use App\Models\Faculty;
 use App\Models\Major;
 use App\Models\Thesis;
@@ -35,9 +36,15 @@ class DashboardController extends Controller
 
     public function update(Request $request)
     {
+        $data = $request->all();
         $user = Auth::user();
-        $user->update($request->all());
+        if ($request->password) {
+            $data['password'] = bcrypt($request->password);
+        } else {
+            unset($data['password']);
+        }
+        $user->update($data);
 
-        return redirect()->route('dashboard.account');
+        return redirect()->route('account')->with('toast_success', 'Your account has been updated.');
     }
 }
