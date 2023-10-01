@@ -12,15 +12,15 @@ use Illuminate\Queue\SerializesModels;
 class SendMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $data_email;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($data_email)
     {
-        //
+        $this->data_email = $data_email;
     }
 
     /**
@@ -31,7 +31,7 @@ class SendMail extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Send Mail',
+            subject: 'Hasil Verifikasi Berkas',
         );
     }
 
@@ -43,7 +43,7 @@ class SendMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'view.name',
+            view: 'pages.dashboard.send-mail',
         );
     }
 

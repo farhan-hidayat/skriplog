@@ -22,6 +22,26 @@ class UploadController extends Controller
         return view('pages.landing.upload', $data);
     }
 
+    public function edit($id)
+    {
+        $data = [
+            'thesis' => Thesis::with('faculty', 'major')->where('no', $id)->firstOrFail(),
+            'faculties' => Faculty::all(),
+            'majors' => Major::all()
+        ];
+
+        return view('pages.landing.details', $data);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
+        $thesis = Thesis::find($id);
+        $thesis->update($data);
+
+        return redirect()->route('home')->with('toast_success', 'Data Berhasil Diubah');
+    }
+
     public function fetchMajors(Request $request)
     {
         $data['majors'] = Major::where('faculty_id', $request->faculty_id)->get();

@@ -5,10 +5,12 @@ namespace App\Http\Controllers\Dashboard;
 use Alert;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ThesisRequest;
+use App\Mail\SendMail;
 use App\Models\Faculty;
 use App\Models\Major;
 use App\Models\Thesis;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ThesisController extends Controller
 {
@@ -150,6 +152,24 @@ class ThesisController extends Controller
 
         $thesis = Thesis::find($id);
         $thesis->update($data);
+
+        if ($request->status == 'Publish') {
+            $pesan = '<h1><p><b>Data sesuai dengan ketentuan</b></p></h1>';
+            $pesan .= '<p>Silahkan periksa kembali data anda pada link berikut:</p>';
+            $pesan .= '<p><a href="' . route('edit-upload', $request->no) . '">Verifikasi</a></p>';
+            $data_email = [
+                'massage' => $pesan,
+            ];
+            Mail::to($request->email)->send(new SendMail($data_email));
+        } else {
+            $pesan = '<h1><p><b>Data tidak sesuai dengan ketentuan</b></p></h1>';
+            $pesan .= '<p>Silahkan periksa kembali data anda pada link berikut:</p>';
+            $pesan .= '<p><a href="' . route('edit-upload', $request->no) . '">Verifikasi</a></p>';
+            $data_email = [
+                'massage' => $pesan
+            ];
+            Mail::to($request->email)->send(new SendMail($data_email));
+        }
 
         return redirect()->route('dashboard')->with('toast_success', 'Data Berhasil Diubah');
     }

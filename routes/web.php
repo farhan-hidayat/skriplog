@@ -21,6 +21,8 @@ Route::get('/kategori', [App\Http\Controllers\landing\CategoryController::class,
 Route::post('search', [App\Http\Controllers\landing\CategoryController::class, 'search'])->name('search');
 Route::get('/kategori/{id}', [App\Http\Controllers\landing\CategoryController::class, 'show'])->name('kategori-show');
 Route::get('/upload', [App\Http\Controllers\landing\UploadController::class, 'index'])->name('upload');
+Route::get('/update/{id}', [App\Http\Controllers\landing\UploadController::class, 'edit'])->name('edit-upload');
+Route::put('/update-berkas/{id}', [App\Http\Controllers\landing\UploadController::class, 'update'])->name('update-upload');
 Route::post('api/fetch-majors', [App\Http\Controllers\landing\UploadController::class, 'fetchMajors'])->name('fetch-majors');
 Route::post('/upload', [App\Http\Controllers\landing\UploadController::class, 'store'])->name('upload-store');
 
