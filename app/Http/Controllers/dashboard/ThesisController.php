@@ -156,7 +156,7 @@ class ThesisController extends Controller
         if ($request->status == 'Publish') {
             $pesan = '<h1><p><b>Data sesuai dengan ketentuan</b></p></h1>';
             $pesan .= '<p>Silahkan periksa kembali data anda pada link berikut:</p>';
-            $pesan .= '<p><a href="' . route('edit-upload', $request->no) . '">Verifikasi</a></p>';
+            $pesan .= '<p><a href="' . route('detail-show', $request->no) . '">Verifikasi</a></p>';
             $data_email = [
                 'massage' => $pesan,
             ];
