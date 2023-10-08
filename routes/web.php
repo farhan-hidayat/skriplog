@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\landing\LandingController::class, 'index'])->name('home');
 Route::get('/detail/{id}', [App\Http\Controllers\landing\LandingController::class, 'show'])->name('detail-show');
-Route::get('/kategori', [App\Http\Controllers\landing\CategoryController::class, 'index'])->name('kategori');
+Route::get('/category', [App\Http\Controllers\landing\CategoryController::class, 'index'])->name('category');
 Route::post('search', [App\Http\Controllers\landing\CategoryController::class, 'search'])->name('search');
 Route::get('/kategori/{id}', [App\Http\Controllers\landing\CategoryController::class, 'show'])->name('kategori-show');
 Route::get('/upload', [App\Http\Controllers\landing\UploadController::class, 'index'])->name('upload');

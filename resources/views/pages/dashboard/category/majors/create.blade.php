@@ -8,9 +8,9 @@
     <div class="section-content section-dashboard-home" data-aos="fade-up">
         <div class="container-fluid">
             <div class="dashboard-heading">
-                <h2 class="dashboard-title">Create New Major</h2>
+                <h2 class="dashboard-title">Tambah Jurusan Baru</h2>
                 <p class="dashboard-subtitle">
-                    Create your own product
+                    Create New Major
                 </p>
             </div>
             <div class="dashboard-content">

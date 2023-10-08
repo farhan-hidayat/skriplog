@@ -45,7 +45,7 @@
                             </div>
                             <button type="submit" class="mt-4 btn btn-success btn-block w-75">Sign In to My
                                 Account</button>
-                            <a href="{{ route('register') }}" class="mt-2 btn btn-signup btn-block w-75">Sign Up</a>
+                            {{-- <a href="{{ route('register') }}" class="mt-2 btn btn-signup btn-block w-75">Sign Up</a> --}}
                         </form>
                     </div>
                 </div>

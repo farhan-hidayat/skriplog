@@ -11,11 +11,11 @@
                 <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                     <a href="{{ route('home') }}" class="nav-link">Home</a>
                 </li>
-                <li class="nav-item {{ request()->is('kategori') ? 'active' : '' }}">
-                    <a href="{{ route('kategori') }}" class="nav-link">Kategori</a>
+                <li class="nav-item {{ request()->is('category') ? 'active' : '' }}">
+                    <a href="{{ route('category') }}" class="nav-link">Category</a>
                 </li>
                 <li class="nav-item {{ request()->is('upload') ? 'active' : '' }}">
-                    <a href="{{ route('upload') }}" class="nav-link">Upload Skripsi</a>
+                    <a href="{{ route('upload') }}" class="nav-link">Upload Data</a>
                 </li>
                 {{-- @guest
                     <li class="nav-item">

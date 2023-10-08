@@ -8,9 +8,9 @@
     <div class="section-content section-dashboard-home" data-aos="fade-up">
         <div class="container-fluid">
             <div class="dashboard-heading">
-                <h2 class="dashboard-title">Create New Faculty</h2>
+                <h2 class="dashboard-title">Tambah Fakultas Baru</h2>
                 <p class="dashboard-subtitle">
-                    Create your own product
+                    Create New Faculty
                 </p>
             </div>
             <div class="dashboard-content">

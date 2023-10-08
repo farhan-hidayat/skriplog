@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <h1 class="mb-4">
                             <center>
-                                Data Skripsi
+                                Data Skripsi/Tesis
                             </center>
                         </h1>
                         <div class="col-12">
