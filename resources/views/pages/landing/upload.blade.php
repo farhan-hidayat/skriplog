@@ -48,7 +48,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <br>
-                                                <label>Tambahkan Cover Skripsi/Tesis</label>
+                                                <label>Cover Skripsi/Tesis (.png/.jpeg)</label>
                                                 <input type="file" name="photo"
                                                     accept="image/png, image/gif, image/jpeg" class="form-control" />
                                             </div>
@@ -56,7 +56,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <br>
-                                                <label>Berkas Skripsi/Tesis</label>
+                                                <label>Berkas Skripsi/Tesis (.pdf)</label>
                                                 <input type="file" name="file" accept="application/pdf"
                                                     class="form-control" />
                                             </div>
@@ -74,7 +74,7 @@
                                                 <div class="form-group">
                                                     <label for="NamaMahasiswa">Nama Mahasiswa</label>
                                                     <input type="text" class="form-control" id="NamaMahasiswa"
-                                                        name="name" placeholder="Apri Hernando"
+                                                        name="name" placeholder="Muhammad Aprianur"
                                                         value="{{ old('name') }}" />
                                                 </div>
                                             </div>
@@ -82,21 +82,21 @@
                                                 <div class="form-group">
                                                     <label for="nim">NIM</label>
                                                     <input type="text" class="form-control" id="nim" name="nim"
-                                                        placeholder="102030405060" />
+                                                        placeholder="203020503030" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="email">email</label>
                                                     <input type="text" class="form-control" id="email" name="email"
-                                                        placeholder="email@email.com" />
+                                                        placeholder="muh.aprianur18@mhs.eng.upr.ac.id" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="title">Judul</label>
                                                     <input type="text" class="form-control" id="title" name="title"
-                                                        placeholder="Rancang Bangun Aplikasi Pendataan Skripsi/Tesis" />
+                                                        placeholder="Aplikasi Pendataan Skripsi dan Tesis Berbasis Website" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
@@ -163,7 +163,7 @@
                     <br>
                     <div class="row" data-aos="fade-up" data-aos-delay="200">
                         <div class="text-center col">
-                            <button type="submit" class="px-5 btn btn-success">
+                            <button type="submit" class="px-5 btn btn-success" style="position: relative; left: -95px;">
                                 Unggah
                             </button>
                         </div>
