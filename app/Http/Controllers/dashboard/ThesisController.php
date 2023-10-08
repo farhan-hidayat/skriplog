@@ -23,7 +23,7 @@ class ThesisController extends Controller
     {
         if (request()->ajax()) {
 
-            $query = Thesis::with('major')->where('category', 'Skripsi');
+            $query = Thesis::with('major', 'faculty')->where('category', 'Skripsi');
             $i = 1;
 
             return DataTables()->of($query)
@@ -67,7 +67,7 @@ class ThesisController extends Controller
     {
         if (request()->ajax()) {
 
-            $query = Thesis::with('major')->where('category', 'Tesis');
+            $query = Thesis::with('major', 'faculty')->where('category', 'Tesis');
             $i = 1;
 
             return DataTables()->of($query)

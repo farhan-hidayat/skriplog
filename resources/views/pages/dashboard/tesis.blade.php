@@ -24,6 +24,7 @@
                                                 <th>Nama</th>
                                                 <th>Judul</th>
                                                 <th>Jurusan</th>
+                                                <th>Fakultas</th>
                                                 <th>Tahun</th>
                                                 <th>Status</th>
                                                 <th>Aksi</th>
@@ -69,6 +70,10 @@
                 {
                     data: 'major.name',
                     name: 'major.name'
+                },
+                {
+                    data: 'faculty.name',
+                    name: 'faculty.name'
                 },
                 {
                     data: 'date',
