@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>All Fakultas</h5>
+                        <h5>All Faculties</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -46,7 +46,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-4" data-aos="fade-up">
-                            <h5>All Thesis</h5>
+                            <h5>All Theses</h5>
                         </div>
                         <div class="col-md-4" data-aos="fade-up">
                             <select name="major" class="select2 form-control">

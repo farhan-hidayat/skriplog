@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <h1 class="mb-4">
                             <center>
-                                Data Skripsi/Tesis
+                                Upload Data
                             </center>
                         </h1>
                         <div class="col-12">
@@ -48,7 +48,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <br>
-                                                <label>Cover Skripsi/Tesis (.png/.jpeg)</label>
+                                                <label>Cover Buku (.png/.jpeg)</label>
                                                 <input type="file" name="photo"
                                                     accept="image/png, image/gif, image/jpeg" class="form-control" />
                                             </div>
@@ -56,7 +56,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <br>
-                                                <label>Berkas Skripsi/Tesis (.pdf)</label>
+                                                <label>Soft File Berkas (.pdf)</label>
                                                 <input type="file" name="file" accept="application/pdf"
                                                     class="form-control" />
                                             </div>

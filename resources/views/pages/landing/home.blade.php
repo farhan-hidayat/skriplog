@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>Preview Fakultas</h5>
+                        <h5>Preview Faculties</h5>
                     </div>
                 </div>
                 <div class="row">
@@ -66,7 +66,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h5>New Thesis</h5>
+                        <h5>New Theses</h5>
                     </div>
                 </div>
                 <div class="row">
