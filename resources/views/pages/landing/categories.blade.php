@@ -46,7 +46,7 @@
                     @csrf
                     <div class="row">
                         <div class="col-md-4" data-aos="fade-up">
-                            <h5>All Skripsi</h5>
+                            <h5>All Thesis</h5>
                         </div>
                         <div class="col-md-4" data-aos="fade-up">
                             <select name="major" class="select2 form-control">
