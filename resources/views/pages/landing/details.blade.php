@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <h1 class="mb-4">
                             <center>
-                                Data Skripsi/Tesis
+                                Perbaiki Data
                             </center>
                         </h1>
                         <div class="col-12">
@@ -38,7 +38,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <br>
-                                                <label>Ubah Cover Skripsi/Tesis</label>
+                                                <label>Ubah Cover (.png/.jpeg)</label>
                                                 <input type="file" name="photo"
                                                     accept="image/png, image/gif, image/jpeg" class="form-control" />
                                             </div>
@@ -52,7 +52,7 @@
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <br>
-                                                <label>Ubah Berkas Skripsi/Tesis</label>
+                                                <label>Ubah Soft File Berkas (.pdf)</label>
                                                 <input type="file" name="file" accept="application/pdf"
                                                     class="form-control" />
                                             </div>
