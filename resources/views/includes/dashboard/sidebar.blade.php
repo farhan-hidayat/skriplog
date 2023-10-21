@@ -23,6 +23,10 @@
             class="list-group-item list-group-item-action {{ request()->is('tesis') ? 'active' : '' }}">
             Data Tesis
         </a>
+        <a href="{{ route('disertasi') }}"
+            class="list-group-item list-group-item-action {{ request()->is('disertasi') ? 'active' : '' }}">
+            Data Disertasi
+        </a>
         {{-- <a href="/dashboard-account.html" class="list-group-item list-group-item-action">
             My Account
         </a> --}}

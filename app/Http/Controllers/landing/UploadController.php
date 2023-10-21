@@ -53,6 +53,7 @@ class UploadController extends Controller
         $data = $request->all();
         $data['photo'] = $request->file('photo')->store('assets/photo', 'public');
         $data['file'] = $request->file('file')->store('assets/file', 'public');
+        $data['review'] = $request->file('review')->store('assets/review', 'public');
         $data['status'] = 'Diproses';
 
         $thesis->create($data);

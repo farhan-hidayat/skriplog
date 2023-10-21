@@ -89,6 +89,9 @@
                                                         <option
                                                             value="Tesis"{{ $thesis->category == 'Tesis' ? 'selected' : '' }}>
                                                             Tesis</option>
+                                                        <option
+                                                            value="Disertasi"{{ $thesis->category == 'Disertasi' ? 'selected' : '' }}>
+                                                            Disertasi</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-12 col-md-2">

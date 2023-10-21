@@ -12,7 +12,7 @@
                     <div class="col-12">
                         <h1 class="mb-4">
                             <center>
-                                Perbaiki Data
+                                Perbaikan Data
                             </center>
                         </h1>
                         <div class="col-12">

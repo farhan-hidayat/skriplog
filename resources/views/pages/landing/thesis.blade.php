@@ -48,6 +48,12 @@
                                         <div class="col-12 col-lg-12">
                                             {!! $thesis->abstract !!}
                                         </div>
+                                        <div class="col-12 col-lg-12">
+                                            <a href="{{ Storage::url($thesis->review) }}"class="mt-3 btn btn-secondary btn-block"
+                                                style="background-color: rgb(255, 162, 0); color: rgb(0, 0, 0);"
+                                                target="_blank">
+                                                Lihat Buku</a>
+                                        </div>
                                     </div>
                                 </div>
                             </section>

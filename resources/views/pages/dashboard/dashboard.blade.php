@@ -13,7 +13,7 @@
             </div>
             <div class="dashboard-content">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Fakultas/Jurusan</div>
@@ -21,7 +21,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Skripsi</div>
@@ -29,11 +29,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="mb-2 card">
                             <div class="card-body">
                                 <div class="dashboard-card-title">Tesis</div>
                                 <div class="dashboard-card-subtitle">{{ $tesisP }}/{{ $tesisAll }}</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="mb-2 card">
+                            <div class="card-body">
+                                <div class="dashboard-card-title">Disertasi</div>
+                                <div class="dashboard-card-subtitle">{{ $disertasiP }}/{{ $disertasiAll }}</div>
                             </div>
                         </div>
                     </div>

@@ -100,6 +100,43 @@ class ThesisController extends Controller
 
         return view('pages.dashboard.tesis');
     }
+    public function disertasi()
+    {
+        if (request()->ajax()) {
+
+            $query = Thesis::with('major', 'faculty')->where('category', 'Disertasi');
+            $i = 1;
+
+            return DataTables()->of($query)
+                ->addColumn('action', function ($item) {
+                    return '
+                        <div class="btn-group">
+                            <div class="dropdown">
+                                <button class="mb-1 mr-1 btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                                    Aksi
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="' . route('details', $item->id) . '">
+                                        Verifikasi
+                                    </a>
+                                    <a href="' . route('destroy_disertasi', $item->id) . '" class="dropdown-item text-danger" data-confirm-delete="true">Hapus</a>
+                                </div>
+                            </div>
+                        </div>';
+                })
+                ->addColumn('no', function ($item) use (&$i) {
+                    return $i++;
+                })
+                ->rawColumns(['action', 'no'])
+                ->make();
+        }
+
+        $title = 'Hapus Data!';
+        $text = "Apakah Anda Yakin Ingin Menghapus Data?";
+        confirmDelete($title, $text);
+
+        return view('pages.dashboard.disertasi');
+    }
 
     /**
      * Store a newly created resource in storage.

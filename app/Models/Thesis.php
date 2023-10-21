@@ -26,6 +26,7 @@ class Thesis extends Model
         'collation',
         'photo',
         'file',
+        'review',
         'status',
         'position',
     ];

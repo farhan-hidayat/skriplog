@@ -39,6 +39,7 @@ class ThesisRequest extends FormRequest
             'collation' => 'nullable|string',
             'photo.*' => 'required|image|mimes:jpeg,png,jpg|max:1024',
             'file.*' => 'required|docs|mimes:pdf|max:5120',
+            'review.*' => 'required|docs|mimes:pdf|max:5120',
             'status' => 'nullable|string',
             'position' => 'nullable|string'
         ];
@@ -55,6 +56,10 @@ class ThesisRequest extends FormRequest
             'file.*.docs' => 'File must be a document',
             'file.*.mimes' => 'File must be a pdf',
             'file.*.max' => 'File must be less than 5MB',
+            'review.*.required' => 'File is required',
+            'review.*.docs' => 'File must be a document',
+            'review.*.mimes' => 'File must be a pdf',
+            'review.*.max' => 'File must be less than 5MB',
             'name.required' => 'Name is required',
             'name.string' => 'Name must be a string',
             'name.max' => 'Name must be less than 255 characters',

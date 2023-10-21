@@ -61,6 +61,14 @@
                                                     class="form-control" />
                                             </div>
                                         </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <br>
+                                                <label>Review BAB I dan BAB II (.pdf)</label>
+                                                <input type="file" name="review" accept="application/pdf"
+                                                    class="form-control" />
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -130,6 +138,7 @@
                                                     <select name="category" id="category" class="form-control">
                                                         <option value="Skripsi">Skripsi</option>
                                                         <option value="Tesis">Tesis</option>
+                                                        <option value="Disertasi">Disertasi</option>
                                                     </select>
                                                 </div>
                                             </div>

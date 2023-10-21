@@ -42,6 +42,8 @@ Route::middleware([
     // Route::get('/faculties/create', [App\Http\Controllers\dashboard\FilesController::class, 'create'])->name('tambah_fak');
     Route::get('/tesis', [App\Http\Controllers\dashboard\ThesisController::class, 'tesis'])->name('tesis');
     Route::delete('/tesis/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'destroyTesis'])->name('destroy_tesis');
+    Route::get('/disertasi', [App\Http\Controllers\dashboard\ThesisController::class, 'disertasi'])->name('disertasi');
+    Route::delete('/disertasi/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'destroyDisertasi'])->name('destroy_disertasi');
     Route::get('/details/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'edit'])->name('details');
     Route::put('/details/{id}', [App\Http\Controllers\dashboard\ThesisController::class, 'update'])->name('verify');
 });
