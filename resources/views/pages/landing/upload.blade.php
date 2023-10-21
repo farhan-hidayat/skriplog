@@ -17,6 +17,15 @@
                         </h1>
                         <div class="col-12">
                             <hr />
+                            {{-- @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif --}}
                         </div>
                     </div>
                 </div>
@@ -50,7 +59,8 @@
                                                 <br>
                                                 <label>Cover Buku (.png/.jpeg)</label>
                                                 <input type="file" name="photo"
-                                                    accept="image/png, image/gif, image/jpeg" class="form-control" />
+                                                    accept="image/png, image/gif, image/jpeg" class="form-control"
+                                                    required />
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -58,7 +68,7 @@
                                                 <br>
                                                 <label>Soft File Berkas (.pdf)</label>
                                                 <input type="file" name="file" accept="application/pdf"
-                                                    class="form-control" />
+                                                    class="form-control" required />
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -66,7 +76,7 @@
                                                 <br>
                                                 <label>Review BAB I dan BAB II (.pdf)</label>
                                                 <input type="file" name="review" accept="application/pdf"
-                                                    class="form-control" />
+                                                    class="form-control" required />
                                             </div>
                                         </div>
                                     </div>
@@ -90,27 +100,29 @@
                                                 <div class="form-group">
                                                     <label for="nim">NIM</label>
                                                     <input type="text" class="form-control" id="nim" name="nim"
-                                                        placeholder="203020503030" />
+                                                        placeholder="203020503030" value="{{ old('nim') }}" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="email">email</label>
                                                     <input type="text" class="form-control" id="email" name="email"
-                                                        placeholder="muh.aprianur18@mhs.eng.upr.ac.id" />
+                                                        placeholder="muh.aprianur18@mhs.eng.upr.ac.id"
+                                                        value="{{ old('email') }}" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="title">Judul</label>
                                                     <input type="text" class="form-control" id="title" name="title"
-                                                        placeholder="Aplikasi Pendataan Skripsi dan Tesis Berbasis Website" />
+                                                        placeholder="Aplikasi Pendataan Skripsi dan Tesis Berbasis Website"
+                                                        value="{{ old('title') }}" />
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label for="abstract">Abstrak</label>
-                                                    <textarea class="form-control" id="abstract" name="abstract">Abstrak pada skripsi dan tesis adalah ringkasan singkat yang memberikan gambaran menyeluruh tentang isi dan tujuan dari penelitian yang dilakukan. Abstrak biasanya terletak di bagian awal dokumen dan ditulis dalam bentuk paragraf atau beberapa paragraf yang singkat dan padat. Fungsi utamanya adalah untuk memberikan gambaran cepat kepada pembaca tentang topik penelitian, metode yang digunakan, temuan utama, dan implikasi dari penelitian tersebut.</textarea>
+                                                    <textarea class="form-control" id="abstract" name="abstract" value="{{ old('abstract') }}">Abstrak pada skripsi dan tesis adalah ringkasan singkat yang memberikan gambaran menyeluruh tentang isi dan tujuan dari penelitian yang dilakukan. Abstrak biasanya terletak di bagian awal dokumen dan ditulis dalam bentuk paragraf atau beberapa paragraf yang singkat dan padat. Fungsi utamanya adalah untuk memberikan gambaran cepat kepada pembaca tentang topik penelitian, metode yang digunakan, temuan utama, dan implikasi dari penelitian tersebut.</textarea>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -146,21 +158,23 @@
                                                 <div class="form-group">
                                                     <label for="date">Tahun</label>
                                                     <input type="text" class="form-control" id="date"
-                                                        name="date" placeholder="2023" />
+                                                        name="date" placeholder="2023" value="{{ old('date') }}" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="metodology">Metodologi Penelitian</label>
                                                     <input type="text" class="form-control" id="metodology"
-                                                        name="metodology" placeholder="Kualitatif" />
+                                                        name="metodology" placeholder="Kualitatif"
+                                                        value="{{ old('metodology') }}" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
                                                     <label for="collation">Kolasi</label>
                                                     <input type="text" class="form-control" id="collation"
-                                                        name="collation" placeholder="VII/150" />
+                                                        name="collation" placeholder="VII/150"
+                                                        value="{{ old('collation') }}" />
                                                 </div>
                                             </div>
                                         </div>
