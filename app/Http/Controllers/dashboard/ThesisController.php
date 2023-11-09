@@ -229,4 +229,11 @@ class ThesisController extends Controller
 
         return redirect()->route('tesis')->with('toast_success', 'Data Berhasil Dihapus');
     }
+
+    public function destroyDisertasi($id)
+    {
+        Thesis::destroy($id);
+
+        return redirect()->route('disertasi')->with('toast_success', 'Data Berhasil Dihapus');
+    }
 }
