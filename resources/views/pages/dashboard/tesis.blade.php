@@ -25,7 +25,7 @@
                                                 <th>Judul</th>
                                                 <th>Jurusan</th>
                                                 <th>Fakultas</th>
-                                                <th>Tahun</th>
+                                                <th>Tanggal</th>
                                                 <th>Status</th>
                                                 <th>Aksi</th>
                                             </tr>

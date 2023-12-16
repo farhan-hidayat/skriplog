@@ -156,9 +156,10 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="form-group">
-                                                    <label for="date">Tahun</label>
+                                                    <label for="date">Tanggal</label>
                                                     <input type="text" class="form-control" id="date"
-                                                        name="date" placeholder="2023" value="{{ old('date') }}" />
+                                                        name="date" placeholder="1 Desember 2023"
+                                                        value="{{ old('date') }}" />
                                                 </div>
                                             </div>
                                             <div class="col-md-4">

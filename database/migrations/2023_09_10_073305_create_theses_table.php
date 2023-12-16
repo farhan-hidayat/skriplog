@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('isrnissn')->unique()->nullable();
             $table->string('no')->unique()->nullable();
             $table->string('category');
-            $table->integer('date');
+            $table->string('date');
             $table->string('metodology');
             $table->string('collation')->nullable();
             $table->string('photo');

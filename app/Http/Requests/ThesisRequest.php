@@ -34,7 +34,7 @@ class ThesisRequest extends FormRequest
             'isrnissn' => 'nullable|string',
             'no' => 'nullable|string',
             'category' => 'required|string',
-            'date' => 'required|integer',
+            'date' => 'required|string',
             'metodology' => 'required|string',
             'collation' => 'nullable|string',
             'photo.*' => 'required|image|mimes:jpeg,png,jpg|max:1024',

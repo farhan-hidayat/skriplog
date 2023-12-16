@@ -94,8 +94,8 @@
                                                             Disertasi</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-12 col-md-2">
-                                                    <div class="product-title">Tahun</div>
+                                                <div class="col-12 col-md-3">
+                                                    <div class="product-title">Tanggal</div>
                                                     <input type="text" class="form-control" id="Tahun" name="date"
                                                         value="{{ $thesis->date }}" />
                                                 </div>
@@ -104,7 +104,7 @@
                                                     <input type="text" class="form-control" id="MetodologiPenelitian"
                                                         name="metodology" value="{{ $thesis->metodology }}" />
                                                 </div>
-                                                <div class="col-12 col-md-4">
+                                                <div class="col-12 col-md-3">
                                                     <div class="product-title">Kolasi</div>
                                                     <input type="text" class="form-control" id="Kolasi"
                                                         name="collation" value="{{ $thesis->collation }}" />
